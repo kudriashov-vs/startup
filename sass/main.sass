@@ -1,0 +1,730 @@
+$text-color: #555
+$active-color: #c0301c
+$block-bg-color: #f8f8f8
+  
+body
+  margin: 0
+  font-family: 'Roboto Slab', serif
+  font-size: 14px
+  font-weight: 400
+  color: $text-color
+html
+  font-size: 14px
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+p
+  margin: 0 0 10px
+
+
+.block-title
+  font-family: 'Montserrat', sans-serif
+  font-size: 1.8rem
+  font-weight: 400
+  text-align: center
+  text-transform: uppercase
+  color: $text-color
+  &:after
+    content: ""
+    display: block
+    width: 4rem
+    height: 3px
+    margin: 2.3rem auto
+    background-color: $text-color
+
+.block-subtitle
+  margin-bottom: 5.3rem
+  font-family: 'Roboto Slab', serif
+  font-size: 16px
+  font-weight: 400
+  text-align: center
+  color: $text-color
+
+// container
+
+.container
+  width: 100%
+  max-width: 1200px
+  padding: 0 15px
+  margin: 0 auto
+
+// header
+
+.header
+  font-family: 'Montserrat', sans-serif
+  position: absolute
+  width: 100%
+  height: 100px
+  left: 0
+  top: 0
+  z-index: 1000
+  transition: all .2s linear
+
+.header.fixed
+  position: fixed
+  background-color: $active-color
+  height: auto
+  .header-inner
+    padding: 15px 0
+
+.header-inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 35px 0
+
+
+.header-logo
+  font-size: 24px
+  font-weight: 700
+  color: white
+
+// navigation
+
+.nav
+  font-size: 14px
+  font-weight: 400
+  display: flex
+
+.nav.show
+  display: flex
+  
+
+.nav-link
+  color: white
+  text-decoration: none
+  margin-right: 30px
+  opacity: .75
+  transition: opacity .2s linear
+  &:hover
+    opacity: 1
+  &:last-child
+    margin-right: 0
+
+.burger
+  width: 30px
+  height: 25px
+  background: none
+  display: none
+  position: relative
+  border: none
+  outline: none
+  position: relative
+  cursor: pointer
+  &:actvete, &:hover, &:focus
+    border: none
+    outline: none
+.burger-item
+  width: 30px
+  height: 3px
+  background-color: white
+  font-size: 0
+  color: transparent
+  cursor: pointer
+  position: absolute
+  left: 0
+  &:before, &:after
+    content: ""
+    display: block
+    width: 30px
+    height: 3px
+    background-color: white
+    position: absolute
+    left: 0
+  &:before
+    top: -8px
+
+  &:after
+    bottom: -8px
+
+
+
+
+// info
+
+.intro
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 100%
+  height: 100vh
+  background: url("../img/intro-bg.jpg") no-repeat center
+  background-size: cover
+  padding-top: 100px
+  font-family: 'Montserrat', sans-serif
+  text-align: center
+  color: white
+
+
+.intro-title
+  font-size: 4rem
+  font-weight: 400
+  margin-bottom: 10px
+
+.intro-subtitle
+  font-family: 'Roboto Slab', serif
+  font-size: 1.5rem
+  font-weight: 400
+  margin-bottom: 3.5rem
+
+
+
+// btn
+
+.btn
+  display: inline-block
+  text-decoration: none
+  color: white
+  padding: 20px 30px
+  border: 2px solid white
+  border-radius: 2px
+  text-transform: uppercase
+  font-size: 16px
+  font-weight: 400
+  transition: all .2s linear
+  &:hover
+    background-color: white
+    color: $active-color
+
+// Services
+
+.services
+  padding: 7rem 0
+  text-align: center
+
+.services-items
+  display: flex
+.services-item
+  width: 33.33333%
+  margin-right: 2rem
+  &:last-child
+    margin-right: 0
+
+.services-ico
+  margin-bottom: 2.2rem
+
+.services-item-title
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  font-size: 14px
+  text-transform: uppercase
+  margin-bottom: 2rem
+
+.services-item-text
+  line-height: 2
+
+
+
+// about
+
+.about
+  background-color: $block-bg-color
+  padding: 7rem 0
+
+.about-texts
+  display: flex
+  margin-bottom: 5.3rem
+  p
+    width: 50%
+    margin-right: 20px
+    line-height: 1.8
+    &:last-child
+      margin-right: 0
+
+
+
+.about-slider-item
+  width: 263px
+  margin: 0 15px
+ 
+
+.about-img-block
+  margin-bottom: 20px
+  position: relative
+  &:after
+    content: ""
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+    background-color: $text-color
+    opacity: 0
+    transition: opacity .2s linear
+    &:hover
+  &:hover:after
+    opacity: .5
+
+.about-photo
+  display: block
+  width: 100%
+  height: 100%
+
+
+
+.about-social-items
+  display: none
+  position: absolute
+  bottom: 20px
+  left: 50%
+  z-index: 3
+  transform: translateX(-50%)
+  
+
+
+.about-social-link
+  display: flex
+  width: 30px
+  height: 30px
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  transition: background-color .2s linear
+  &:hover
+    background-color: $active-color
+
+.about-social-icon
+  display: block
+  fill: white
+  width: 16px
+
+.about-img-block:hover .about-social-items
+  display: flex
+
+.about-name
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  font-size: 14px
+  text-transform: uppercase
+  text-align: center
+  margin-bottom: 5px
+
+
+.about-proffesion
+  font-weight: 400
+  font-size: 13px
+  text-align: center
+
+
+
+// works
+
+.works
+  padding: 7rem 0
+
+.works-filter
+  display: flex
+  justify-content: center
+  margin-bottom: 5.3rem
+
+.filter-button
+  border: none
+  background: none
+  font-family: 'Roboto Slab', serif
+  font-size: 16px
+  font-weight: 400
+  cursor: pointer
+  padding: 0
+  margin-right: 2rem
+  color: $text-color
+  transition: color .2s linear
+  &:active, &:focus, &:hover
+    outline: none
+  &:hover
+    color: $active-color
+  &:last-child
+    margin-right: 0
+
+.works-wrap
+  display: flex
+  flex-wrap: wrap
+
+.works-item
+  width: 33.333333%
+  height: 320px
+  overflow: hidden
+  position: relative
+  
+
+.work-img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%, -50%, 0)
+
+.work-content
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  width: 100%
+  height: 100%
+  background-color: transparentize($active-color,.3)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  color: white
+  opacity: 0
+  transition: opacity .2s linear
+  
+  
+
+
+.work-title
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+  font-weight: 400
+  margin-bottom: 15px
+
+.work-discription
+  font-size: 12px
+  font-weight: 400
+  margin-bottom: 25px
+
+.work-link
+  display: block
+  width: 100px
+  margin: 0 auto
+  color: $active-color
+  padding: 15px 0
+  text-align: left
+  padding-left: 15px
+  background-color: white
+  text-decoration: none
+  text-transform: uppercase
+  position: relative
+  &:after
+    content: ""  
+    display: block
+    width: 10px
+    height: 10px
+    border: 2px solid $active-color
+    border-bottom: none
+    border-right: none
+    transform: translateY(-50%) rotate(135deg)
+    position: absolute
+    top: 50%
+    right: 15px
+
+.works-item:hover .work-content
+  opacity: 1
+
+
+
+
+// buy block
+
+.buy-block
+  position: relative
+  padding: 7rem 0
+  background: $active-color url(../img/buy-block-bg.jpg) no-repeat center
+  background-size: cover
+  &:after
+    content: ""
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 2
+    background-color: transparentize($active-color,.3)
+.buy-inner
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  justify-content: center
+  position: relative
+  z-index: 4
+  h2
+    font-size: 2.2rem
+    line-height: 1.2
+    font-weight: 400
+    color: white
+    margin-bottom: 4rem
+
+
+// blog
+
+.blog
+  padding: 7rem 0
+
+.blog-item
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 40px
+  border-bottom: 1px solid $text-color
+  margin-bottom: 40px
+  &:last-child
+    border: none
+    padding: 0
+    margin: 0
+
+.blog-img
+  display: block
+  width: 40%
+  
+
+.blog-item-content
+  width: 60%
+  padding-left: 40px
+
+.blog-item-header
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+.blog-item-date
+  display: block
+  width: 75px
+  height: 75px
+  border: 2px solid $text-color
+  text-align: center
+
+.blog-item-date
+  font-family: 'Montserrat', sans-serif
+  font-weight: 700
+  text-transform: uppercase
+  font-size: 24px
+  line-height: .7
+  padding-top: 20px
+.blog-item-month
+  font-size: 14px
+
+.blog-item-title
+  margin-left: 30px
+  h2
+    font-family: 'Montserrat', sans-serif
+    font-weight: 400
+    font-size: 16px
+    color: $active-color
+    text-transform: uppercase
+    margin-bottom: 10px
+  .blog-item-author
+    font-weight: 700
+    font-size: 13px
+    color: $text-color
+    span
+      color: $active-color
+
+.blog-item-text
+  line-height: 1.8
+  margin-bottom: 20px
+
+.blog-item-link
+  font-size: 13px
+  font-weight: 700
+  color: $active-color
+  text-decoration: none
+  text-transform: uppercase
+
+
+
+
+// form block
+
+.contacts-form
+  background-color: $block-bg-color
+  padding: 7rem 0
+
+.contacts-form-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.contacts
+  width: 24%
+  h3
+    font-family: 'Montserrat', sans-serif
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 10px
+  p
+    font-size: 12px
+    line-height: 1.7
+  .contacts-item
+    padding-left: 25px
+    margin-bottom: 40px
+    &:first-child
+      background: url(../img/form/map-marker.svg) no-repeat top left
+    &:nth-child(2)
+      background: url(../img/form/phone.svg) no-repeat top left
+    &:last-child
+      background: url(../img/form/email.svg) top left no-repeat
+      margin-bottom: 0
+
+
+.form
+  display: flex
+  width: 64%
+  flex-wrap: wrap
+  justify-content: space-between
+  input
+    width: 47%
+    margin-bottom: 24px
+    margin-right: 32px
+    &:nth-child(2),
+    &:nth-child(4)
+      margin-right: 0
+  textarea
+    width: 100%
+    resize: none
+    margin-bottom: 24px
+  input, textarea
+    padding: 15px 13px
+    border: 2px solid transparentize($text-color,.3)
+    font-family: 'Roboto Slab', serif
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+    color: $text-color
+    &:placeholder
+      font-family: 'Roboto Slab', serif
+      font-size: 12px
+      font-weight: 400
+      text-transform: uppercase
+      color: $text-color
+    &:hover, &:focus, &:active
+      border: 2px solid transparentize($active-color,.3)
+      outline: none
+
+.for-submit-button
+  display: flex
+  align-items: center
+  p
+    margin-left: 40px
+    font-size: 12px
+    span
+      color: $active-color
+
+.submit-button
+  background: none
+  border: 2px solid transparentize($text-color,.3)
+  padding: 20px 35px
+  font-family: 'Roboto Slab', serif
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  color: $text-color
+  cursor: pointer
+  transition: all .2s linear
+  &:hover
+    border: 2px solid transparentize($active-color,.3)
+    color: $active-color
+
+.footer
+  background-color: $active-color
+  padding: 5rem 0
+  text-align: center
+  color: white
+  font-size: 12px
+  text-transform: uppercase
+
+.footer-social
+  display: flex
+  justify-content: center
+  padding-bottom: 30px
+  margin-bottom: 30px
+  text-align: center
+  position: relative
+  &:after
+    content: ""
+    display: block
+    width: 50px
+    height: 2px
+    background-color: white
+    margin-right: 0 auto
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+  .about-social-link
+    border: 2px solid white
+    border-radius: 50%
+    margin: 0 8px
+  
+
+    
+
+
+
+
+  // slick slider 
+
+
+.prev-arrow,
+.next-arrow
+  width: 35px
+  height: 40px
+  background-color: $text-color
+  opacity: .2
+  position: absolute
+  top: 50%
+  transform: translateY(-100%)
+  z-index: 4
+  transition: all .2s linear
+  cursor: pointer
+  &:after
+    content: ""
+    display: block
+    width: 14px
+    height: 14px
+    position: absolute
+    top: 14px
+    border: 2px solid white
+    border-top: none
+    border-left: none
+  &:hover
+    background-color: $active-color
+    opacity: 1
+  
+
+.prev-arrow
+  left: 0
+  &:after
+    transform: rotate(135deg)
+    left: 13px
+  
+
+.next-arrow
+  right: 0
+  &:after
+    transform: rotate(-45deg)
+    right: 13px
+
+.slick-list
+  margin: 0 -15px !important
+
+
+@import "media"
+
+
+
+
+
+  
+
+
+    
+
+
+
+
+
+
+
+  
+
+  
+  

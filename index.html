@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <title>landingpage</title>
+  </head>
+  <body>
+    <!-- svg sprite -->
+    <svg style="display: none;">
+      <symbol id="facebook" viewBox="0 0 430.113 430.114">
+        <g>
+          <path
+            d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"
+          />
+        </g>
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+          <path
+            d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                C480.224,136.96,497.728,118.496,512,97.248z"
+          />
+        </g>
+      </symbol>
+      <symbol id="google" viewBox="0 0 604.35 604.35">
+        <g>
+          <path
+            d="M516.375,255v-76.5h-51V255h-76.5v51h76.5v76.5h51V306h76.5v-51H516.375z M320.025,341.7l-28.051-20.4
+                c-10.2-7.649-20.399-17.85-20.399-35.7s12.75-33.15,25.5-40.8c33.15-25.5,66.3-53.55,66.3-109.65c0-53.55-33.15-84.15-51-99.45
+                h43.35l30.6-35.7h-158.1c-112.2,0-168.3,71.4-168.3,147.9c0,58.65,45.9,122.4,127.5,122.4h20.4c-2.55,7.65-10.2,20.4-10.2,33.15
+                c0,25.5,10.2,35.7,22.95,51c-35.7,2.55-102,10.2-150.45,40.8c-45.9,28.05-58.65,66.3-58.65,94.35
+                c0,58.65,53.55,114.75,168.3,114.75c137.7,0,204.001-76.5,204.001-150.449C383.775,400.35,355.725,372.3,320.025,341.7z
+                 M126.225,109.65c0-56.1,33.15-81.6,68.85-81.6c66.3,0,102,89.25,102,140.25c0,66.3-53.55,79.05-73.95,79.05
+                C159.375,247.35,126.225,168.3,126.225,109.65z M218.024,568.65c-84.15,0-137.7-38.25-137.7-94.351c0-56.1,51-73.95,66.3-81.6
+                c33.15-10.2,76.5-12.75,84.15-12.75s12.75,0,17.85,0c61.2,43.35,86.7,61.2,86.7,102C335.324,530.4,286.875,568.65,218.024,568.65z
+                "
+          />
+        </g>
+      </symbol>
+      <symbol id="in" viewBox="0 0 430.117 430.117">
+        <g>
+          <path
+            d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+                c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+                v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+                C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+                c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+                 M5.477,420.56h92.184v-277.32H5.477V420.56z"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <!-- /svg sprite -->
+    <!-- header -->
+    <header class="header" id="header">
+      <!-- container -->
+      <div class="container">
+        <!-- header-inner -->
+        <div class="header-inner">
+          <div class="header-logo">Startup</div>
+          <nav class="nav" id="nav">
+            <a href="#" class="nav-link" data-scroll="#home">Home</a>
+            <a href="#" class="nav-link" data-scroll="#services">Services</a>
+            <a href="#" class="nav-link" data-scroll="#about">About</a>
+            <a href="#" class="nav-link" data-scroll="#works">Works</a>
+            <a href="#" class="nav-link" data-scroll="#blog">Blog</a>
+            <a href="#" class="nav-link" data-scroll="#contacts">Contacts</a>
+          </nav>
+          <button class="burger" id="navToggle"><span class="burger-item">menu</span></button>
+          <!-- /.nav -->
+        </div>
+        <!-- /.header-inner -->
+      </div>
+    </header>
+    <!-- /.header -->
+    <!-- info -->
+    <div class="intro" id="home">
+      <!-- container -->
+      <div class="container">
+        <h1 class="intro-title">Welcome to Startup</h1>
+        <h2 class="intro-subtitle">Your Favourite Creative Agency Template</h2>
+        <a href="#" class="btn" data-target="#contacts">Get Started</a>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.intro -->
+    <div class="services" id="services">
+      <div class="container">
+        <h2 class="block-title">Services</h2>
+        <h3 class="block-subtitle">
+          We offer ipsum dolor sit amet, consetetur sadipscing elitr amet
+        </h3>
+        <div class="services-items">
+          <div class="services-item">
+            <img src="img/services/s1-ico.svg" alt="" class="services-ico" />
+            <h4 class="services-item-title">Clean Typography</h4>
+            <p class="services-item-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              maxime quam architecto quo inventore harum ex magni, dicta
+              impedit. Lorem ipsum.
+            </p>
+          </div>
+          <div class="services-item">
+            <img src="img/services/s2-ico.svg" alt="" class="services-ico" />
+            <h4 class="services-item-title">Rock Solid Code</h4>
+            <p class="services-item-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              maxime quam architecto quo inventore harum ex magni, dicta
+              impedit. Lorem ipsum.
+            </p>
+          </div>
+          <div class="services-item">
+            <img src="img/services/s3-ico.svg" alt="" class="services-ico" />
+            <h4 class="services-item-title">Expert Support</h4>
+            <p class="services-item-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              maxime quam architecto quo inventore harum ex magni, dicta
+              impedit. Lorem ipsum.
+            </p>
+          </div>
+        </div>
+        <!-- /.services-items -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.services -->
+    <!-- about -->
+    <div class="about" id="about">
+      <div class="container">
+        <h2 class="block-title">About us</h2>
+        <h3 class="block-subtitle">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+        </h3>
+        <div class="about-texts">
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam
+            nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed
+            diam voluptua. At vero eos et accusam et justo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+            dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem
+            ipsum dolor sit amet. Lorem ipsum eat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam
+            nonumy eirtempor invidunt ut labore et dolore aliquyam erat, sed
+            diam voluptua. At vero eos eaccusam et justo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+            dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum
+            dolor sit amet. Lorem ipsum dolor et.
+          </p>
+        </div>
+        <div class="about-slider-wrap">
+          <div class="about-slider-item">
+            <div class="about-img-block">
+              <img class="about-photo" src="img/about/about1.jpg" alt="" />
+              <div class="about-social-items">
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#google"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#in"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="about-name">Md. Khalil Uddin</h4>
+            <h5 class="about-proffesion">Head of Ideas</h5>
+          </div>
+          <div class="about-slider-item">
+            <div class="about-img-block">
+              <img class="about-photo" src="img/about/about2.jpg" alt="" />
+              <div class="about-social-items">
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#google"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#in"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="about-name">Rubel Miah</h4>
+            <h5 class="about-proffesion">Lead WordPress Developer</h5>
+          </div>
+          <div class="about-slider-item">
+            <div class="about-img-block">
+              <img class="about-photo" src="img/about/about3.jpg" alt="" />
+              <div class="about-social-items">
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#google"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#in"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="about-name">Shamim Mia</h4>
+            <h5 class="about-proffesion">Sr. Web Developer</h5>
+          </div>
+          <div class="about-slider-item">
+            <div class="about-img-block">
+              <img class="about-photo" src="img/about/about4.jpg" alt="" />
+              <div class="about-social-items">
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#google"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#in"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="about-name">John Doe</h4>
+            <h5 class="about-proffesion">Front-end Developer</h5>
+          </div>
+          <div class="about-slider-item">
+            <div class="about-img-block">
+              <img class="about-photo" src="img/about/about1.jpg" alt="" />
+              <div class="about-social-items">
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#google"></use>
+                  </svg>
+                </a>
+                <a href="#" class="about-social-link">
+                  <svg class="about-social-icon">
+                    <use xlink:href="#in"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="about-name">Md. Khalil Uddin</h4>
+            <h5 class="about-proffesion">Head of Ideas</h5>
+          </div>
+        </div>
+        <!-- /.slider-wrap -->
+      </div>
+    </div>
+    <!-- /.about -->
+    <!-- works -->
+    <div class="works" id="works">
+      <div class="container">
+        <!-- container -->
+        <h2 class="block-title">Latest Works</h2>
+        <div class="works-filter">
+          <!-- works filter -->
+          <button class="filter-button" type="button">All</button>
+          <button class="filter-button" type="button">Branding</button>
+          <button class="filter-button" type="button">Design</button>
+          <button class="filter-button" type="button">Development</button>
+          <button class="filter-button" type="button">Strategy</button>
+        </div>
+        <!-- /works-filter -->
+        <div class="works-wrap">
+          <!-- works wrap -->
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work1.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work2.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work3.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work4.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work5.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work6.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work7.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work8.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+          <div class="works-item">
+            <img
+              class="work-img"
+              src="img/works/work9.jpg"
+              alt=""
+              class="work-img"
+            />
+            <div class="work-content">
+              <h4 class="work-title">Hair Dresser</h4>
+              <p class="work-discription">Branding</p>
+              <a href="#" class="work-link">View</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.works-wrap -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /.works -->
+
+    <!-- buy block -->
+
+    <div class="buy-block">
+      <div class="buy-inner">
+        <div class="container">
+          <h2>
+            Do you like OUR WORK so far?<br />
+            Let's talk about YOUR PROJECT!
+          </h2>
+          <a href="#" class="btn" data-target="#contacts">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <!-- /.buy-block -->
+
+    <!-- blog -->
+
+    <div class="blog" id="blog">
+      <div class="container">
+        <h2 class="block-title">Recent blog posts</h2>
+        <h3 class="block-subtitle">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+        </h3>
+        <div class="blog-item">
+          <img src="img/blog/blog1.jpg" alt="" class="blog-img" />
+          <div class="blog-item-content">
+            <div class="blog-item-header">
+              <span class="blog-item-date">
+                18 <br />
+                <span class="blog-item-month">Oct</span>
+              </span>
+              <div class="blog-item-title">
+                <h2>Startup ideas needs to be funded</h2>
+                <h4 class="blog-item-author">
+                  By <span>Khalil</span> Uddin in <span>Development</span>
+                </h4>
+              </div>
+            </div>
+            <p class="blog-item-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et erebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing
+              elitr, sed diam nonumy eirmod tempor invidulabore et dolore
+              aliquyam erat, sed diam
+            </p>
+            <a href="#" class="blog-item-link">Read more</a>
+          </div>
+        </div>
+        <div class="blog-item">
+          <img src="img/blog/blog2.jpg" alt="" class="blog-img" />
+          <div class="blog-item-content">
+            <div class="blog-item-header">
+              <span class="blog-item-date">
+                18 <br />
+                <span class="blog-item-month">Oct</span>
+              </span>
+              <div class="blog-item-title">
+                <h2>Startup ideas needs to be funded</h2>
+                <h4 class="blog-item-author">
+                  By <span>Khalil</span> Uddin in <span>Development</span>
+                </h4>
+              </div>
+            </div>
+            <p class="blog-item-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et erebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing
+              elitr, sed diam nonumy eirmod tempor invidulabore et dolore
+              aliquyam erat, sed diam
+            </p>
+            <a href="#" class="blog-item-link">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.blog -->
+
+    <!-- form block -->
+
+    <div class="contacts-form" id="contacts">
+      <div class="container">
+        <h2 class="block-title">Get in touch</h2>
+        <h3 class="block-subtitle">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+        </h3>
+        <div class="contacts-form-wrap">
+          <!-- form-wrap -->
+          <div class="contacts">
+            <!-- contacts -->
+            <div class="contacts-item">
+              <h3 class="contacts-item-title">Address</h3>
+              <p>
+                312, 7th Ave, New York<br />
+                NY 101200, United States of America
+              </p>
+            </div>
+            <div class="contacts-item">
+              <h3 class="contacts-item-title">Hotline (24x7)</h3>
+              <p>
+                +65 0052 300, +65 88251 210<br />
+                +88 01723 511 340
+              </p>
+            </div>
+            <div class="contacts-item">
+                <h3 class="contacts-item-title">E-mail</h3>
+                <p>
+                  shapedtheme@gmail.com<br>
+                    khalilkode@gmail.com
+                </p>
+            </div>
+          </div>
+          <!-- /.contacts -->
+          <form action="#" method="POST" class="form">
+            <input class="name" name="user_name" type="text" placeholder="Your Name">
+            <input class="email" name="user_email" type="text" placeholder="Your E-mail">
+            <input class="subject" name="subject" type="text" placeholder="Your Subject">
+            <input class="company-name" name="company_name" type="text" placeholder="Company name">
+            <textarea name="message" class="your-message" cols="30" rows="5" placeholder="Write your message"></textarea>
+            <div class="for-submit-button">
+              <button type="submit" class="submit-button">Send message</button>
+              <p><span>*</span> We’ll contact you as as possible. We don’t reply on Monday.</p>
+            </div>
+          </form>
+        </div>
+        <!-- /.form-wrap -->
+      </div>
+    </div>
+    <!-- /.contact-form -->
+
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-social">
+          <a href="#" class="about-social-link">
+            <svg class="about-social-icon">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="about-social-link">
+            <svg class="about-social-icon">
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+          <a href="#" class="about-social-link">
+            <svg class="about-social-icon">
+              <use xlink:href="#google"></use>
+            </svg>
+          </a>
+          <a href="#" class="about-social-link">
+            <svg class="about-social-icon">
+              <use xlink:href="#in"></use>
+            </svg>
+          </a>
+        </div>
+        <span class="copyright">© 2015 Startup, Designed by ShapedTheme</span>
+      </div>
+    </footer>
+    <!-- /.footer -->
+
+
+    <!-- add jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- add slick slider -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- add main.js -->
+
+    <script src="js/main.js"></script>
+   
+  </body>
+</html>
